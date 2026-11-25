@@ -1,0 +1,15 @@
+// Hidden Terminal — niri rules. Included from ~/.config/niri/config.kdl.
+
+// Remove the terminal (and its popups/menus) from every screen capture:
+// xdg-desktop-portal screencasts (browsers, OBS, Zoom, Discord, Teams...),
+// niri's automatic screenshot actions, and third-party screenshot tools.
+// kind="hide" draws whatever is *behind* the window instead of a black box.
+window-rule {
+    match app-id=r#"^dev\.hidden\.Terminal$"#
+    block-out-from "screen-capture" kind="hide"
+}
+
+binds {
+    Mod+T hotkey-overlay-title="Open Hidden Terminal" { spawn "hidden-terminal"; }
+    Mod+Return hotkey-overlay-title="Open Hidden Terminal" { spawn "hidden-terminal"; }
+}

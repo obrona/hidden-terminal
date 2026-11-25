@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Hidden Terminal
+Comment=Terminal that is excluded from screen capture (under niri)
+Exec=hidden-terminal
+Icon=utilities-terminal
+Terminal=false
+Categories=System;TerminalEmulator;
+StartupWMClass=dev.hidden.Terminal
+Actions=new-window;
+
+[Desktop Action new-window]
+Name=New Window
+Exec=hidden-terminal
